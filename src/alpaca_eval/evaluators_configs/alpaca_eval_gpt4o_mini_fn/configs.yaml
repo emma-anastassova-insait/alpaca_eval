@@ -1,5 +1,5 @@
 alpaca_eval_gpt4_turbo_fn:
-  prompt_template: "alpaca_eval_gpt4_turbo_fn/alpaca_eval_fn.txt"
+  prompt_template: "alpaca_eval_gpt4o_mini_fn/alpaca_eval_fn.txt"
   fn_completions: "openai_completions"
   completions_kwargs:
     model_name: "gpt-4o-mini"
