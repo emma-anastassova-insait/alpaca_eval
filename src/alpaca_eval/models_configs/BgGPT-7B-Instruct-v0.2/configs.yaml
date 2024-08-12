@@ -1,0 +1,15 @@
+BgGPT-7B-Instruct-v0.2:
+  prompt_template: "BgGPT-7B-Instruct-v0.2/prompt.txt"
+  fn_completions: "huggingface_local_completions"
+  completions_kwargs:
+    model_name: "INSAIT-Institute/BgGPT-7B-Instruct-v0.2"
+    model_kwargs:
+      torch_dtype: "bfloat16"  # bfloat not float for bggpt
+      device_map: 'cuda:0'  # or cuda0
+      trust_remote_code: True
+    max_new_tokens: 2048
+    temperature: 0.1 # alpaca_eval use 0.7 a lot for evaluated models, maybe modify
+    top_p: 1.0
+    do_sample: True
+  pretty_name: "BgGPT 7B Instruct v0.2"
+  link: "https://huggingface.co/INSAIT-Institute/BgGPT-7B-Instruct-v0.2"
